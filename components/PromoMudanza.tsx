@@ -9,7 +9,7 @@ const PromoMudanza: React.FC = () => {
         <div className="bg-brand-blue rounded-[2.5rem] overflow-hidden shadow-2xl relative">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
-             <img src="/mnt/data/mudancera.jpg" alt="Mudanza" className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
+             <img src="/images/mudancera.jpg" alt="Mudanza" className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
              <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-blue/90 to-brand-lightblue/80"></div>
           </div>
 

@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       {/* Background Banner Image - Fleet Photo */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/mnt/data/flotaok.png" 
+          src="/images/flotaok.png" 
           alt="Flota de Transportes Manfredi" 
           className="w-full h-full object-cover object-center md:object-bottom"
         />
@@ -90,9 +90,8 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          {/* Right side area: Kept clear for the fleet image to shine through, but we can add a small floating badge */}
+          {/* Right side area */}
           <div className="hidden md:flex justify-end items-end h-full">
-             {/* Optional: Add a trust badge here if needed, otherwise keep clean for photo */}
           </div>
         </div>
       </div>

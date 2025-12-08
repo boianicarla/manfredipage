@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, MessageCircle, PhoneCall } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,8 @@ const Navbar: React.FC = () => {
           
           {/* Logo Section */}
           <div className="flex items-center gap-3 cursor-pointer group" onClick={() => window.scrollTo(0, 0)}>
-             <img src="/mnt/data/logo.jpeg" alt="Manfredi Logo" className="h-12 w-auto object-contain transition-transform group-hover:scale-105" />
+             {/* Ruta absoluta para asegurar carga en hosting */}
+             <img src="/images/logo.jpeg" alt="Manfredi Logo" className="h-12 w-auto object-contain transition-transform group-hover:scale-105" />
              <div className="hidden sm:flex flex-col">
                 <span className="text-2xl font-heading font-extrabold text-brand-blue tracking-tighter leading-none">
                   MANFREDI
@@ -41,7 +42,7 @@ const Navbar: React.FC = () => {
             
             <a 
               href="https://wa.me/5491140841177" 
-              className="bg-brand-gold hover:bg-[#e2a632] text-white px-6 py-2.5 rounded-full font-heading font-bold text-sm transition-all shadow-md hover:shadow-lg flex items-center gap-2 transform hover:-translate-y-0.5"
+              className="bg-brand-whatsapp hover:bg-brand-whatsappDark text-white px-6 py-2.5 rounded-full font-heading font-bold text-sm transition-all shadow-md hover:shadow-lg flex items-center gap-2 transform hover:-translate-y-0.5"
             >
               <MessageCircle size={18} fill="white" className="text-white" />
               <span>WhatsApp</span>

@@ -11,7 +11,7 @@ const About: React.FC = () => {
              <div className="absolute -top-4 -left-4 w-24 h-24 bg-brand-gold rounded-full opacity-20 blur-xl"></div>
              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-blue rounded-full opacity-10 blur-xl"></div>
              <img 
-               src="/mnt/data/flota.jpeg" 
+               src="/images/manfredi1.jpg" 
                alt="Equipo Manfredi" 
                className="rounded-2xl shadow-xl relative z-10 w-full object-cover border-4 border-white"
              />
