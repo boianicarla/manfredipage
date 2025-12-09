@@ -1,5 +1,5 @@
 import React from 'react';
-import { Truck, Package, Home, Bike, Dog, Car, Hammer, ChevronRight } from 'lucide-react';
+import { Truck, Home, Dog, Car, Hammer, ChevronRight } from 'lucide-react';
 
 const services = [
   {
@@ -13,11 +13,6 @@ const services = [
     icon: <Home className="h-8 w-8 text-brand-blue" />,
   },
   {
-    title: "Entregas E-commerce",
-    description: "Tarifa plana por zona. Retiro en local y entrega programada a tus clientes.",
-    icon: <Package className="h-8 w-8 text-brand-blue" />,
-  },
-  {
     title: "Servicio de Grúa",
     description: "Traslado seguro de vehículos y maquinaria ligera en Capital y GBA.",
     icon: <Car className="h-8 w-8 text-brand-blue" />,
@@ -26,11 +21,6 @@ const services = [
     title: "Traslado de Mascotas",
     description: "Viajes cuidados, seguros y pet-friendly para tus compañeros.",
     icon: <Dog className="h-8 w-8 text-brand-blue" />,
-  },
-  {
-    title: "Mensajería en Moto",
-    description: "Solución rápida para paquetes chicos, documentación y trámites urgentes.",
-    icon: <Bike className="h-8 w-8 text-brand-blue" />,
   },
   {
     title: "Servicios Adicionales",
@@ -54,7 +44,7 @@ const Services: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div key={index} className="group bg-white rounded-2xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_10px_25px_-5px_rgba(0,117,242,0.15)] transition-all duration-300 border border-brand-fawn/20 hover:border-brand-blue/50 relative overflow-hidden flex flex-col">
               
@@ -67,15 +57,15 @@ const Services: React.FC = () => {
                 {service.description}
               </p>
               
-              <div className="flex items-center text-brand-blue font-bold text-sm mt-auto opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-[-10px] group-hover:translate-x-0">
+              <a href={`https://wa.me/5491140841177?text=Hola,%20me%20interesa%20el%20servicio%20de%20${encodeURIComponent(service.title)}`} target="_blank" rel="noopener noreferrer" className="flex items-center text-brand-blue font-bold text-sm mt-auto opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-[-10px] group-hover:translate-x-0 cursor-pointer">
                 <span>Solicitar</span>
                 <ChevronRight size={16} />
-              </div>
+              </a>
             </div>
           ))}
           
           {/* CTA Card for Custom Quote */}
-          <a href="https://wa.me/5491140841177" className="bg-brand-blue rounded-2xl p-8 shadow-lg flex flex-col justify-center items-center text-center group cursor-pointer hover:bg-brand-blue/90 transition-colors">
+          <a href="https://wa.me/5491140841177" target="_blank" rel="noopener noreferrer" className="bg-brand-blue rounded-2xl p-8 shadow-lg flex flex-col justify-center items-center text-center group cursor-pointer hover:bg-brand-blue/90 transition-colors">
               <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Truck className="text-white" size={32} />
               </div>

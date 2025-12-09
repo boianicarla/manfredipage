@@ -9,7 +9,7 @@ const PromoMudanza: React.FC = () => {
         <div className="bg-brand-blue rounded-[2.5rem] overflow-hidden shadow-2xl relative">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
-             <img src="/images/mudancera.jpg" alt="Mudanza" className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
+             <img src="images/mudancera.jpg" loading="lazy" alt="Mudanza" className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
              <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-blue/90 to-brand-lightblue/80"></div>
           </div>
 
@@ -44,6 +44,8 @@ const PromoMudanza: React.FC = () => {
               <div className="pt-6">
                 <a 
                   href="https://wa.me/5491140841177?text=Quiero%20info%20sobre%20la%20PROMO%20MUDANZA" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white px-8 py-4 rounded-xl font-heading font-bold text-lg transition-all shadow-lg hover:shadow-green-500/30 hover:-translate-y-1"
                 >
                   <MessageCircle size={24} />

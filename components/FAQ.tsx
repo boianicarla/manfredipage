@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     question: "¿Hacen entregas en el día?",
-    answer: "Sí, logística optimizada para máxima velocidad. Ideal para urgencias o e-commerce."
+    answer: "Sí, logística optimizada para máxima velocidad. Ideal para urgencias."
   },
   {
     question: "¿Hay recargo por lluvia?",

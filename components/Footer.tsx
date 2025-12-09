@@ -9,7 +9,8 @@ const Footer: React.FC = () => {
           
           <div className="col-span-1">
             <div className="flex items-center gap-3 mb-6 bg-white/10 p-2 rounded-lg w-fit">
-              <img src="/images/logo.jpeg" alt="Logo" className="h-10 w-auto rounded-md mix-blend-multiply" />
+              {/* Ruta relativa para asegurar carga en hosting */}
+              <img src="images/logo.jpeg" alt="Logo" className="h-10 w-auto rounded-md mix-blend-multiply" />
               <div className="flex flex-col">
                 <span className="text-lg font-heading font-bold text-white uppercase tracking-tight">Manfredi</span>
                 <span className="text-brand-gold text-[9px] uppercase tracking-widest font-bold">Transportes</span>
@@ -30,8 +31,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm font-body text-white/80">
               <li><a href="#servicios" className="hover:text-white transition-colors">Mudanzas Particulares</a></li>
               <li><a href="#servicios" className="hover:text-white transition-colors">Fletes Corporativos</a></li>
-              <li><a href="#servicios" className="hover:text-white transition-colors">Logística E-commerce</a></li>
               <li><a href="#servicios" className="hover:text-white transition-colors">Servicio de Grúa</a></li>
+              <li><a href="#servicios" className="hover:text-white transition-colors">Traslado de Mascotas</a></li>
             </ul>
           </div>
 
@@ -40,7 +41,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm font-body">
               <li className="flex items-start gap-3">
                 <Phone size={18} className="text-brand-gold mt-0.5" />
-                <a href="https://wa.me/5491140841177" className="hover:text-white transition-colors font-bold">11 4084-1177</a>
+                <a href="https://wa.me/5491140841177" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-bold">11 4084-1177</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-brand-gold" />

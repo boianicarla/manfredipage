@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, Package } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       {/* Background Banner Image - Fleet Photo */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/images/flotaok.png" 
+          src="images/flotaok.png" 
           alt="Flota de Transportes Manfredi" 
           className="w-full h-full object-cover object-center md:object-bottom"
         />
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
 
             {/* Featured Promo Banner */}
             <div className="bg-brand-blue/40 backdrop-blur-md border border-brand-gold/40 rounded-2xl p-4 max-w-md cursor-pointer hover:bg-brand-blue/60 transition-all group shadow-lg">
-                <a href="https://wa.me/5491140841177?text=Hola,%20me%20interesa%20la%20Promo%20Mudancera" className="flex items-center gap-4">
+                <a href="https://wa.me/5491140841177?text=Hola,%20me%20interesa%20la%20Promo%20Mudancera" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4">
                     <div className="bg-brand-gold p-3 rounded-xl shadow-inner group-hover:scale-105 transition-transform">
                         <Package className="text-brand-dark h-6 w-6" />
                     </div>
@@ -76,6 +76,8 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <a
                 href="https://wa.me/5491140841177?text=Hola,%20quisiera%20solicitar%20un%20presupuesto%20para%20un%20flete/mudanza."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative px-8 py-4 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white text-lg font-heading font-bold rounded-xl transition-all shadow-lg hover:shadow-green-500/30 flex items-center justify-center gap-3"
               >
                 <span>Solicitar Presupuesto</span>

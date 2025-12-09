@@ -20,13 +20,13 @@ const Navbar: React.FC = () => {
           
           {/* Logo Section */}
           <div className="flex items-center gap-3 cursor-pointer group" onClick={() => window.scrollTo(0, 0)}>
-             {/* Ruta absoluta para asegurar carga en hosting */}
-             <img src="/images/logo.jpeg" alt="Manfredi Logo" className="h-12 w-auto object-contain transition-transform group-hover:scale-105" />
+             {/* Ruta relativa para asegurar carga en hosting */}
+             <img src="images/logo.jpeg" alt="Manfredi Logo" className="h-12 w-auto object-contain transition-transform group-hover:scale-105" />
              <div className="hidden sm:flex flex-col">
                 <span className="text-2xl font-heading font-extrabold text-brand-blue tracking-tighter leading-none">
                   MANFREDI
                 </span>
-                <span className="text-[10px] font-bold text-brand-gold tracking-[0.3em] uppercase">
+                <span className="text-[10px] font-bold text-brand-blue/70 tracking-[0.3em] uppercase">
                   Transportes
                 </span>
              </div>
@@ -42,6 +42,8 @@ const Navbar: React.FC = () => {
             
             <a 
               href="https://wa.me/5491140841177" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-brand-whatsapp hover:bg-brand-whatsappDark text-white px-6 py-2.5 rounded-full font-heading font-bold text-sm transition-all shadow-md hover:shadow-lg flex items-center gap-2 transform hover:-translate-y-0.5"
             >
               <MessageCircle size={18} fill="white" className="text-white" />
@@ -69,7 +71,7 @@ const Navbar: React.FC = () => {
             <a href="#servicios" className="block px-4 py-3 text-brand-dark hover:bg-brand-blue/5 rounded-lg font-bold" onClick={() => setIsOpen(false)}>Servicios</a>
             <a href="#nosotros" className="block px-4 py-3 text-brand-dark hover:bg-brand-blue/5 rounded-lg font-bold" onClick={() => setIsOpen(false)}>Nosotros</a>
             <a href="#faq" className="block px-4 py-3 text-brand-dark hover:bg-brand-blue/5 rounded-lg font-bold" onClick={() => setIsOpen(false)}>Preguntas Frecuentes</a>
-            <a href="https://wa.me/5491140841177" className="flex items-center gap-2 px-4 py-3 bg-brand-whatsapp text-white font-bold hover:bg-brand-whatsappDark rounded-lg mt-4" onClick={() => setIsOpen(false)}>
+            <a href="https://wa.me/5491140841177" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-3 bg-brand-whatsapp text-white font-bold hover:bg-brand-whatsappDark rounded-lg mt-4" onClick={() => setIsOpen(false)}>
               <MessageCircle size={20} />
               Solicitar Presupuesto
             </a>

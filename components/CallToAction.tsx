@@ -15,6 +15,8 @@ const CallToAction: React.FC = () => {
         </p>
         <a 
             href="https://wa.me/5491140841177" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white px-10 py-5 rounded-full text-xl font-heading font-bold transition-all shadow-xl hover:-translate-y-1 hover:shadow-green-500/40 group"
         >
             <MessageCircle size={28} className="group-hover:rotate-12 transition-transform" />
