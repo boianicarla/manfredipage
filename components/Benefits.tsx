@@ -5,7 +5,7 @@ const Benefits: React.FC = () => {
   const benefits = [
     { icon: <HeartHandshake size={32} />, title: "Atención Personalizada", desc: "Trato directo y cordial." },
     { icon: <Zap size={32} />, title: "Más Rápido", desc: "Rutas optimizadas y respuesta ágil." },
-    { icon: <Wallet size={32} />, title: "Más Barato", desc: "Tecnología eficiente y tarifas claras." },
+    { icon: <Wallet size={32} />, title: "Precios Accesibles", desc: "Tecnología eficiente y tarifas claras." },
     { icon: <CalendarCheck size={32} />, title: "Todos los Días", desc: "Disponibles lunes a domingos." },
     { icon: <MessageCircle size={32} />, title: "Respuesta Inmediata", desc: "Te contestamos al instante por WhatsApp." },
   ];

@@ -62,7 +62,7 @@ const LogisticsSecurity: React.FC = () => {
             <div className="lg:w-1/2 relative">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white">
                     <img 
-                        src="images/flota.jpeg" 
+                        src="./images/flota.jpeg" 
                         alt="Seguridad Logística Manfredi" 
                         loading="lazy"
                         className="w-full h-auto object-cover"

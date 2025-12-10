@@ -8,8 +8,9 @@ const Hero: React.FC = () => {
       {/* Background Banner Image - Fleet Photo */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="images/flotaok.png" 
+          src="./images/flotaok.png" 
           alt="Flota de Transportes Manfredi" 
+          fetchPriority="high"
           className="w-full h-full object-cover object-center md:object-bottom"
         />
         {/* Modern Gradient Overlay: Darker on left for text, transparent on right for fleet visibility */}
@@ -53,7 +54,7 @@ const Hero: React.FC = () => {
               </h1>
               
               <h2 className="text-xl md:text-2xl text-white/95 font-body font-light leading-relaxed drop-shadow-md max-w-lg">
-                Más Rápido, Más Barato. Servicio logístico integral con seguimiento satelital.
+                Más Rápido, Precios Accesibles. Servicio logístico integral con seguimiento satelital.
               </h2>
             </div>
 

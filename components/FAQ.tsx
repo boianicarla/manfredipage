@@ -32,7 +32,7 @@ const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div id="faq" className="py-20 bg-brand-fawn/10">
+    <div id="faq" className="py-20 bg-brand-fawn/10 scroll-mt-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-brand-blue font-heading font-bold tracking-widest uppercase text-sm mb-2">Preguntas Frecuentes</h2>

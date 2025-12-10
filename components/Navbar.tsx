@@ -20,13 +20,14 @@ const Navbar: React.FC = () => {
           
           {/* Logo Section */}
           <div className="flex items-center gap-3 cursor-pointer group" onClick={() => window.scrollTo(0, 0)}>
-             {/* Ruta relativa para asegurar carga en hosting */}
-             <img src="images/logo.jpeg" alt="Manfredi Logo" className="h-12 w-auto object-contain transition-transform group-hover:scale-105" />
+             {/* Ruta relativa explícita para asegurar carga en hosting */}
+             <img src="./images/logo.jpeg" alt="Manfredi Logo" className="h-12 w-auto object-contain transition-transform group-hover:scale-105" />
              <div className="hidden sm:flex flex-col">
                 <span className="text-2xl font-heading font-extrabold text-brand-blue tracking-tighter leading-none">
                   MANFREDI
                 </span>
-                <span className="text-[10px] font-bold text-brand-blue/70 tracking-[0.3em] uppercase">
+                {/* Aumento de contraste para mejor usabilidad */}
+                <span className="text-[10px] font-bold text-brand-blue tracking-[0.3em] uppercase">
                   Transportes
                 </span>
              </div>

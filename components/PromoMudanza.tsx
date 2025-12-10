@@ -1,80 +1,142 @@
 import React from 'react';
-import { CheckCircle2, MessageCircle, Truck } from 'lucide-react';
+import { CheckCircle2, MessageCircle, Package, Star, Crown } from 'lucide-react';
 
 const PromoMudanza: React.FC = () => {
+  const plans = [
+    {
+      title: "Paquete Básico",
+      subtitle: "Mudate a tu medida",
+      icon: <Package className="w-10 h-10 text-brand-blue" />,
+      description: "¡Empezá tu mudanza sin estrés! Ideal si preferís ocuparte de los detalles pequeños.",
+      features: [
+        "20 cajas de cartón + 3 rollos de cinta + 1 rollo de papel burbuja (entrega previa).",
+        "Vos embalás lo chico, nosotros nos encargamos de las cosas grandes.",
+        "Desarme de muebles necesario.",
+        "Protección de sillones, colchones y muebles delicados con stretch y mantas.",
+        "Flota de vehículos y Coordinador de mudanza asignado.",
+      ],
+      ctaText: "Consultar Básico",
+      highlight: false
+    },
+    {
+      title: "Paquete Premium",
+      subtitle: "Organización Total",
+      icon: <Star className="w-10 h-10 text-brand-gold" />,
+      description: "Tu mudanza totalmente organizada y sin preocupaciones. Nosotros embalamos.",
+      features: [
+        "Personal capacitado embala todo lo chico el día anterior.",
+        "Incluye embalaje de vajilla, decoración, libros y objetos del hogar.",
+        "Protección especial y desarme de muebles.",
+        "Flota de vehículos y Coordinador de mudanza supervisando.",
+        "Instalación de electrodomésticos (no incluye aire acondicionado).",
+      ],
+      ctaText: "Consultar Premium",
+      highlight: true
+    },
+    {
+      title: "Paquete Gold",
+      subtitle: "Servicio All Inclusive",
+      icon: <Crown className="w-10 h-10 text-brand-gold" />,
+      description: "La experiencia más completa. Desembalaje, instalación y limpieza básica.",
+      features: [
+        "Embalaje total el día anterior (vajilla, deco, libros, etc).",
+        "Protección premium y desarme de muebles.",
+        "Instalación de electrodomésticos.",
+        "Desinstalación e instalación de soportes de TV.",
+        "Desembalaje de cosas chicas y puesta en lugar.",
+        "Limpieza general básica del hogar.",
+      ],
+      ctaText: "Consultar Gold",
+      highlight: false
+    }
+  ];
+
   return (
-    <div id="promo" className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="promo" className="py-24 bg-brand-fawn/5 relative overflow-hidden scroll-mt-24">
+      {/* Decorative Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-96 bg-brand-blue/90 skew-y-3 transform -translate-y-20 z-0"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="bg-brand-blue rounded-[2.5rem] overflow-hidden shadow-2xl relative">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-             <img src="images/mudancera.jpg" loading="lazy" alt="Mudanza" className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
-             <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-blue/90 to-brand-lightblue/80"></div>
+        <div className="text-center mb-16">
+          <div className="inline-block bg-brand-gold text-brand-dark font-heading font-bold px-4 py-1.5 rounded-full text-sm tracking-wider uppercase shadow-lg mb-4">
+            ¡Nuevos Planes!
           </div>
+          <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-white mb-4">
+            Elegí tu Plan de Mudanza
+          </h2>
+          <p className="text-xl text-white/90 font-body max-w-2xl mx-auto">
+            Desde la opción esencial hasta el servicio todo incluido. Nos adaptamos a lo que necesitás.
+          </p>
+        </div>
 
-          <div className="relative z-10 grid lg:grid-cols-2 gap-12 p-8 md:p-16 items-center">
-            
-            <div className="space-y-6">
-              <div className="inline-block bg-brand-gold text-brand-dark font-heading font-bold px-4 py-1.5 rounded-lg text-sm tracking-wider uppercase shadow-lg transform -rotate-2">
-                ¡Oportunidad del Mes!
+        <div className="grid md:grid-cols-3 gap-8">
+          {plans.map((plan, index) => {
+            // Lógica de colores del botón
+            let buttonColors = 'bg-brand-blue text-white hover:bg-brand-blue/90';
+            if (plan.title.includes("Gold")) {
+                buttonColors = 'bg-brand-dark text-white hover:bg-neutral-800';
+            } else if (plan.highlight) {
+                buttonColors = 'bg-brand-gold text-brand-dark hover:bg-yellow-400';
+            }
+
+            return (
+              <div 
+                key={index} 
+                className={`flex flex-col h-full bg-white rounded-2xl shadow-xl overflow-hidden border-2 transition-transform duration-300 hover:-translate-y-2 ${plan.highlight ? 'border-brand-gold ring-4 ring-brand-gold/20' : 'border-transparent'}`}
+              >
+                <div className="p-8 flex-grow">
+                  <div className="flex justify-between items-start mb-6">
+                     <div className={`p-3 rounded-xl bg-brand-blue/5 ${plan.title.includes("Gold") ? 'bg-brand-dark' : ''}`}>
+                        {plan.icon}
+                     </div>
+                     {plan.highlight && (
+                       <span className="bg-brand-gold text-xs font-bold px-2 py-1 rounded text-brand-dark uppercase">Recomendado</span>
+                     )}
+                  </div>
+                  
+                  <h3 className="text-2xl font-heading font-bold text-brand-dark mb-1">{plan.title}</h3>
+                  <p className="text-sm font-bold text-brand-blue uppercase tracking-wide mb-4">{plan.subtitle}</p>
+                  
+                  <p className="text-brand-dark/70 text-sm mb-6 leading-relaxed min-h-[3rem]">
+                    {plan.description}
+                  </p>
+
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-3 text-sm text-brand-dark/80">
+                        <CheckCircle2 className="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" />
+                        <span className="leading-snug">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="p-8 pt-0 mt-auto w-full">
+                  <a 
+                    href={`https://wa.me/5491140841177?text=Hola,%20me%20interesa%20conocer%20mas%20sobre%20el%20${encodeURIComponent(plan.title)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-heading font-bold transition-all shadow-lg whitespace-nowrap ${buttonColors}`}
+                  >
+                    <MessageCircle size={20} className="flex-shrink-0" />
+                    <span>{plan.ctaText}</span>
+                  </a>
+                </div>
               </div>
-              <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-white leading-none">
-                PROMO <span className="text-brand-gold block">MUDANZA</span>
-              </h2>
-              <p className="text-xl text-white/90 font-body font-light">
-                Servicio exclusivo para mudanzas de 1, 2 y 3 ambientes en Capital Federal.
-              </p>
-              
-              <ul className="space-y-3 pt-4">
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="text-brand-gold w-6 h-6" />
-                  <span className="text-lg font-heading">Personal de carga y descarga incluido</span>
-                </li>
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="text-brand-gold w-6 h-6" />
-                  <span className="text-lg font-heading">Unidades modernas y limpias</span>
-                </li>
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="text-brand-gold w-6 h-6" />
-                  <span className="text-lg font-heading">Sin costos ocultos</span>
-                </li>
-              </ul>
+            );
+          })}
+        </div>
 
-              <div className="pt-6">
-                <a 
-                  href="https://wa.me/5491140841177?text=Quiero%20info%20sobre%20la%20PROMO%20MUDANZA" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white px-8 py-4 rounded-xl font-heading font-bold text-lg transition-all shadow-lg hover:shadow-green-500/30 hover:-translate-y-1"
-                >
-                  <MessageCircle size={24} />
-                  Consultar Disponibilidad
+        <div className="mt-12 text-center">
+             <div className="bg-white/10 backdrop-blur-md inline-flex items-center gap-4 px-6 py-4 rounded-2xl border border-brand-dark/10 shadow-sm">
+                <p className="text-brand-dark font-medium text-sm">
+                  ¿Necesitás algo más específico?
+                </p>
+                <a href="https://wa.me/5491140841177" target="_blank" rel="noopener noreferrer" className="text-brand-blue font-bold hover:underline">
+                  Consultar presupuesto a medida
                 </a>
-              </div>
-            </div>
-
-            <div className="hidden lg:block relative">
-               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-                  <div className="flex items-center gap-4 mb-6">
-                     <div className="bg-brand-gold p-3 rounded-full">
-                       <Truck className="text-brand-dark w-8 h-8" />
-                     </div>
-                     <div>
-                       <h3 className="text-white font-heading font-bold text-xl">Pack Mudanza Pro</h3>
-                       <p className="text-white/70 font-body text-sm">Todo resuelto en un solo viaje</p>
-                     </div>
-                  </div>
-                  <div className="space-y-4 text-white/90 font-body">
-                     <p>Olvidate del estrés. Nosotros nos encargamos de subir, bajar y transportar tus cosas con el cuidado que merecen.</p>
-                     <p className="text-sm border-t border-white/10 pt-4 mt-4 opacity-70">
-                       * Disponible para CABA y alrededores. Consultar condiciones para pisos altos por escalera.
-                     </p>
-                  </div>
-               </div>
-            </div>
-
-          </div>
+             </div>
         </div>
 
       </div>

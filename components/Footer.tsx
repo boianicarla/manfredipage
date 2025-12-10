@@ -9,8 +9,8 @@ const Footer: React.FC = () => {
           
           <div className="col-span-1">
             <div className="flex items-center gap-3 mb-6 bg-white/10 p-2 rounded-lg w-fit">
-              {/* Ruta relativa para asegurar carga en hosting */}
-              <img src="images/logo.jpeg" alt="Logo" className="h-10 w-auto rounded-md mix-blend-multiply" />
+              {/* Ruta relativa explícita para asegurar carga en hosting */}
+              <img src="./images/logo.jpeg" alt="Logo" loading="lazy" className="h-10 w-auto rounded-md mix-blend-multiply" />
               <div className="flex flex-col">
                 <span className="text-lg font-heading font-bold text-white uppercase tracking-tight">Manfredi</span>
                 <span className="text-brand-gold text-[9px] uppercase tracking-widest font-bold">Transportes</span>

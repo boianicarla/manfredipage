@@ -31,7 +31,7 @@ const services = [
 
 const Services: React.FC = () => {
   return (
-    <div id="servicios" className="py-24 bg-brand-white">
+    <div id="servicios" className="py-24 bg-brand-white scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16 max-w-3xl mx-auto">
@@ -57,7 +57,7 @@ const Services: React.FC = () => {
                 {service.description}
               </p>
               
-              <a href={`https://wa.me/5491140841177?text=Hola,%20me%20interesa%20el%20servicio%20de%20${encodeURIComponent(service.title)}`} target="_blank" rel="noopener noreferrer" className="flex items-center text-brand-blue font-bold text-sm mt-auto opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-[-10px] group-hover:translate-x-0 cursor-pointer">
+              <a href={`https://wa.me/5491140841177?text=Hola,%20me%20interesa%20el%20servicio%20de%20${encodeURIComponent(service.title)}`} target="_blank" rel="noopener noreferrer" className="flex items-center text-brand-blue font-bold text-sm mt-auto opacity-100 translate-x-0 md:opacity-0 md:translate-x-[-10px] md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300 cursor-pointer">
                 <span>Solicitar</span>
                 <ChevronRight size={16} />
               </a>
