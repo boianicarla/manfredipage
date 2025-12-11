@@ -54,17 +54,28 @@ const About: React.FC = () => {
                     <ThermometerSnowflake size={100} />
                 </div>
                 
-                <div className="relative z-10">
-                    <div className="flex items-center gap-3 mb-3">
-                        <div className="bg-brand-blue p-2 rounded-lg">
-                            <ThermometerSnowflake className="text-white" size={24} />
+                <div className="relative z-10 flex flex-col sm:flex-row gap-6 items-center">
+                    <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-brand-blue p-2 rounded-lg">
+                                <ThermometerSnowflake className="text-white" size={24} />
+                            </div>
+                            <h4 className="font-heading font-bold text-brand-dark text-lg">Unidades Refrigeradas</h4>
                         </div>
-                        <h4 className="font-heading font-bold text-brand-dark text-lg">Unidades Refrigeradas</h4>
+                        <p className="text-brand-dark/70 font-body text-sm leading-relaxed">
+                            Contamos con unidades refrigeradas especialmente equipadas para mantener temperaturas controladas durante todo el traslado. 
+                            Esto garantiza el cumplimiento de normas sanitarias y la conservación adecuada de alimentos.
+                        </p>
                     </div>
-                    <p className="text-brand-dark/70 font-body text-sm leading-relaxed">
-                        Contamos con unidades refrigeradas especialmente equipadas para mantener temperaturas controladas durante todo el traslado. 
-                        Esto garantiza el cumplimiento de normas sanitarias y la conservación adecuada de alimentos y productos sensibles, asegurando que cada carga llegue a destino en perfectas condiciones.
-                    </p>
+                    {/* Imagen de unidad refrigerada */}
+                    <div className="w-full sm:w-1/3 flex-shrink-0">
+                        <img 
+                            src="./images/refrigerado.jpeg" 
+                            alt="Camioneta con equipo de refrigeración" 
+                            loading="lazy"
+                            className="w-full h-auto rounded-xl shadow-md border-2 border-white object-cover"
+                        />
+                    </div>
                 </div>
             </div>
 

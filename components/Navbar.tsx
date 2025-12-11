@@ -18,19 +18,14 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           
-          {/* Logo Section */}
+          {/* Logo Section - Texto eliminado y tamaño aumentado */}
           <div className="flex items-center gap-3 cursor-pointer group" onClick={() => window.scrollTo(0, 0)}>
-             {/* Ruta relativa explícita para asegurar carga en hosting */}
-             <img src="./images/logo.jpeg" alt="Manfredi Logo" className="h-12 w-auto object-contain transition-transform group-hover:scale-105" />
-             <div className="hidden sm:flex flex-col">
-                <span className="text-2xl font-heading font-extrabold text-brand-blue tracking-tighter leading-none">
-                  MANFREDI
-                </span>
-                {/* Aumento de contraste para mejor usabilidad */}
-                <span className="text-[10px] font-bold text-brand-blue tracking-[0.3em] uppercase">
-                  Transportes
-                </span>
-             </div>
+             {/* Ruta relativa explícita. Se ajusta el tamaño dinámicamente con el scroll */}
+             <img 
+               src="./images/logo.jpeg" 
+               alt="Manfredi Logo" 
+               className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${scrolled ? 'h-12 md:h-14' : 'h-16 md:h-20'}`} 
+             />
           </div>
           
           {/* Desktop Menu */}

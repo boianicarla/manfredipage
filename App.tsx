@@ -13,6 +13,7 @@ import Testimonials from './components/Testimonials';
 import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
+import BackToTop from './components/BackToTop';
 
 const App: React.FC = () => {
   return (
@@ -32,6 +33,7 @@ const App: React.FC = () => {
         <CallToAction />
       </main>
       <Footer />
+      <BackToTop />
       <WhatsAppFloat />
     </div>
   );

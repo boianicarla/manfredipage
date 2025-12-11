@@ -53,8 +53,8 @@ const PromoMudanza: React.FC = () => {
 
   return (
     <div id="promo" className="py-24 bg-brand-fawn/5 relative overflow-hidden scroll-mt-24">
-      {/* Decorative Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-96 bg-brand-blue/90 skew-y-3 transform -translate-y-20 z-0"></div>
+      {/* Decorative Background Elements - Altura aumentada en móvil para evitar corte de texto */}
+      <div className="absolute top-0 left-0 w-full h-[600px] md:h-96 bg-brand-blue/90 skew-y-3 transform -translate-y-20 z-0"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -62,10 +62,10 @@ const PromoMudanza: React.FC = () => {
           <div className="inline-block bg-brand-gold text-brand-dark font-heading font-bold px-4 py-1.5 rounded-full text-sm tracking-wider uppercase shadow-lg mb-4">
             ¡Nuevos Planes!
           </div>
-          <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-white mb-4">
             Elegí tu Plan de Mudanza
           </h2>
-          <p className="text-xl text-white/90 font-body max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/90 font-body max-w-2xl mx-auto">
             Desde la opción esencial hasta el servicio todo incluido. Nos adaptamos a lo que necesitás.
           </p>
         </div>
